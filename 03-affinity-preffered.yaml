@@ -5,6 +5,7 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
+    # soft rule 
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         preference:
