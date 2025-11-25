@@ -29,3 +29,23 @@ spec:
   # This is equal to docker. docker run -d --name nginx nginx
   - name: nginx
     image: nginx      
+---
+piVersion: v1
+kind: Pod
+metadata:
+  name: pod-2
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: purpose
+            operator: In
+            values:
+            - affinity
+        topologyKey: topology.kubernetes.io/zone
+  containers:
+  # This is equal to docker. docker run -d --name nginx nginx
+  - name: nginx
+    image: nginx
