@@ -7,6 +7,8 @@ spec:
   # This is equal to docker. docker run -d --name nginx nginx
   - name: nginx
     image: nginx  
+  nodeSelector:
+    disktype: ssd 
   tolerations:
   - key: "hardware"
     operator: "Equal"
