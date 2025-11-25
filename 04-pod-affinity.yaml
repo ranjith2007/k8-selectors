@@ -33,7 +33,7 @@ spec:
 piVersion: v1
 kind: Pod
 metadata:
-  name: pod-2
+  name: pod-3
 spec:
   affinity:
     podAntiAffinity:
